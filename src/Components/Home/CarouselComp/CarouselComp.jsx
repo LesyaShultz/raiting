@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { fetchMovies, fetchGenre } from "../../Service/service";
+import { fetchMovies } from "../../../Service/service";
 import { Carousel } from "react-bootstrap";
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
+import "./CarouselComp.css";
 
-export function Home() {
+export function CarouselComp() {
   const [nowPlaying, setNowPlaying] = useState([]);
 
   useEffect(() => {
@@ -14,24 +15,25 @@ export function Home() {
     fetchApi();
   }, []);
 
-  const movies = nowPlaying.slice(0, 8).map((item, index) => {
+  const movies = nowPlaying.slice(0, 5).map((item, index) => {
     return (
       <Carousel.Item
         key={index}
         interval={2000}
-        style={{ height: 400 }}
+        style={{ maxHeight: 400 }}
         // fade={true}
       >
         <img
           src={item.backPoster}
           alt={item.title}
-          style={{ width: "100%", height: "100%" }}
+          className="d-block w-100"
+          // style={{ width: "100%", height: "100%" }}
         />
 
         <div className="carousel-center">
           <i
             className="fa-solid fa-circle-play"
-            style={{ fontSize: 100, color: "yellow" }}
+            style={{ fontSize: 100, color: "yellow", cursor: "pointer" }}
           ></i>
         </div>
         <Carousel.Caption>
@@ -44,10 +46,10 @@ export function Home() {
   return (
     <div>
       <div className="wrap-carousel">
-        <Carousel pause={false}>{movies}</Carousel>
+        <Carousel >{movies}</Carousel>
       </div>
     </div>
   );
 }
 
-export default Home;
+export default CarouselComp;

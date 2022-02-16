@@ -1,0 +1,47 @@
+.item-name {
+    text-transform: capitalize;
+}
+
+.list-inline-item {
+    margin: 10px 2px 0 0;
+    
+}
+
+.item-name {
+    padding: 3px 7px;
+   
+}
+
+.img-fluid {
+ /* height: 270px; */
+ border-radius: 10px;
+}
+ 
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 5px;
+} 
+
+.stars {
+    display: flex;
+    justify-content: center;
+}
+
+.color-r{
+    color: #0DCAF0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.release-date{
+    font-size: 16px;
+}
+
+.wrapPerson {
+    display: flex;
+    text-align: center;
+}

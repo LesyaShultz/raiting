@@ -2,26 +2,33 @@ import React from 'react';
 import './App.css';
 import {Routes, Route} from 'react-router-dom';
 import {MovieDetail} from './Components/Home/MovieDetail/MovieDetail';
-import {Home} from './Components/Home/Home';
-import NavBar from '../src/Components/NavBar/NavBar'
-import GenreCard from './Components/Home/GenreCard/GenreCard';
+import {CarouselComp} from './Components/Home/CarouselComp/CarouselComp';
+import MovieBlock from '../src/Components/MovieBlock/MovieBlock'
+import {GenreCard} from './Components/Home/GenreCard/GenreCard';
+import Header from './Components/Header/Header'
 
 
 export function App() {
   return (
+    <>
+    <Header/>
     <main >
       <div className='container-block'>
        {/* <MovieDetail/> */}
-      {/* <Home/>  */}
-      
+      {/* <   MovieBlock/>  */}
+   
      <Routes>
-       <Route path="/" element={<Home/>}/>
-       <Route path="/movie/:id" element={<MovieDetail/>}/>
+       <Route path="/" element={<CarouselComp/>}/>
+       {/* <Route path="/movie/:id" element={<MovieBlock/>}/> */}
+       {/* <Route path="/movie/:id" element={<MovieDetail/>}/> */}
+       {/* <Route path="/movie/:id" element={<GenreCard/>}/> */}
+       
     </Routes> 
-     <NavBar/>
-     <GenreCard/>
+     <MovieBlock/>
+     
      </div>
     </main>
+    </>
   );
 }
 
