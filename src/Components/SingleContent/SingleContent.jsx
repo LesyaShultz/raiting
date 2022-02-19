@@ -24,8 +24,6 @@ const SingleContent = ({
    <div className="wrap-card col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3" >
       {/* <NavLink to={`/movie/${item.id}`}> */}
       <NavLink to={`/movie/${movie.id}`} >
-
-
       {/* <NavLink to={`/movie/${movie.id}`}> */}
       {poster ? (
         <img
