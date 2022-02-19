@@ -15,12 +15,18 @@ code {
     monospace;
 }
 
-main{
+body{
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.6), 
     rgba(0, 0, 0, 0.6)
-  ),url(/src/Img/fon.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  ), url("Img/fon.jpg");
+background-repeat: no-repeat;
+background-size: cover;
   
+}
+
+:root {
+  --color: #0DCAF0;
+  --dg:  rgb(2, 1, 10);
+  --color2:#0dcaf0d8;
 }

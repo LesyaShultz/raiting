@@ -1,0 +1,12 @@
+.nav {
+    background-color: rgb(17, 16, 16);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+.nav-link{
+    color: var(--color2);
+}
+

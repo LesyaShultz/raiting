@@ -1,35 +1,28 @@
-import React from 'react';
-import './App.css';
-import {Routes, Route} from 'react-router-dom';
-import {MovieDetail} from './Components/Home/MovieDetail/MovieDetail';
-import {CarouselComp} from './Components/Home/CarouselComp/CarouselComp';
-import MovieBlock from '../src/Components/MovieBlock/MovieBlock'
-import {GenreCard} from './Components/Home/GenreCard/GenreCard';
-import Header from './Components/Header/Header'
-
+import React from "react";
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Works from "./Components/Works/Works";
+import SimpleBottomNavigation from './Components/Navigation/Navigation'
+import MovieInfo from "./Components/MovieInfo/MovieInfo";
+import Trending from './Components/Pages/Trending'
+import Movies from './Components/Pages/Movies'
+import Series from './Components/Pages/Series'
+import CarouselComp from './Components/Carousel/CarouselComp'
 
 export function App() {
-  return (
+  return(
     <>
-    <Header/>
-    <main >
-      <div className='container-block'>
-       {/* <MovieDetail/> */}
-      {/* <   MovieBlock/>  */}
-   
-     <Routes>
-       <Route path="/" element={<CarouselComp/>}/>
-       {/* <Route path="/movie/:id" element={<MovieBlock/>}/> */}
-       {/* <Route path="/movie/:id" element={<MovieDetail/>}/> */}
-       {/* <Route path="/movie/:id" element={<GenreCard/>}/> */}
-       
-    </Routes> 
-     <MovieBlock/>
-     
-     </div>
-    </main>
+    
+    <Routes>
+      <Route path="/" element={<Works/>}/>
+      <Route path="/trending" element={<Trending/>}/>
+      {/* <Route path="/movies" element={<CarouselComp />}/> */}
+      <Route path="/series" element={<Series/>}/>
+      <Route path="/movie/:id" element={<MovieInfo/>}/>
+    </Routes>
+    <SimpleBottomNavigation/>
+    
     </>
-  );
+  )
 }
-
 export default App;

@@ -1,26 +1,27 @@
+// import _default from "react-bootstrap/esm/ToggleButtonGroup"
 import "./Header.css";
-import { NavLink } from "react-router-dom";
-import React, { useEffect, useState } from "react";
-import ReactStars from "react-rating-stars-component";
-import GenreCard from '../Home/GenreCard/GenreCard'
-import Search from '../Search/Search'
+import React from "react";
 
-
-
-function Header() {
- 
-  
+function Header({ searchMovies, setSearchKey, NavLink }) {
   return (
-    <>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-      <NavLink to="/">
-        <i class="fa fa-film" aria-hidden="true"></i>
-      </NavLink>
-     {/* <Search/> */}
-    </nav>
-    {/* <GenreCard results={results}></GenreCard> */}
-    </>
+    <header onClick={() => window.scroll(0, 0)}>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
+        <NavLink to="/">
+          <i class="fa fa-film " aria-hidden="true"></i>
+        </NavLink>
+        <form class="form-inline-block my-2 my-lg-0" onSubmit={searchMovies}>
+          <input
+            class="form-control mr-sm-2"
+            placeholder="Search"
+            onChange={(e) => setSearchKey(e.target.value)}
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type={"submit"}>
+            Поиск
+          </button>
+        </form>
+      </nav>
+    </header>
   );
 }
-export default Header;
 
+export default Header;
