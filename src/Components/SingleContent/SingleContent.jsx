@@ -25,6 +25,7 @@ const SingleContent = ({
       {/* <NavLink to={`/movie/${item.id}`}> */}
       <NavLink to={`/movie/${movie.id}`} >
 
+
       {/* <NavLink to={`/movie/${movie.id}`}> */}
       {poster ? (
         <img
